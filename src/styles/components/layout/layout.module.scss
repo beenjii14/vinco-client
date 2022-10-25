@@ -1,0 +1,61 @@
+.navbar {
+  max-width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+
+  .navbarLogo {
+    height: 100%;
+    width: 250px;
+    padding: 15px 0;
+    cursor: pointer;
+  }
+
+  .navbarOptions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 50%;
+
+    > a {
+      padding: 0 20px;
+      font-size: 1.5rem;
+      color: red;
+      text-decoration: none;
+      margin: 0 20px;
+    }
+
+    .btn {
+      width: 200px;
+      height: 50px;
+      margin: 0 50px;
+      font-size: 16px;
+      font-weight: bold;
+      border: 0;
+      cursor: pointer;
+      border-radius: 3px;
+
+      &.btnPrimary {
+        background-color: #20ad96;
+        color: white;
+      }
+      &.btnPrimary:hover {
+        background-color: white;
+        color: #20ad96;
+        border: 1px solid #20ad96;
+      }
+
+      &.btnInfo {
+        background-color: #3f3a64;
+        color: white;
+      }
+      &.btnInfo:hover {
+        background-color: white;
+        color: #3f3a64;
+        border: 1px solid #3f3a64;
+      }
+    }
+  }
+}
