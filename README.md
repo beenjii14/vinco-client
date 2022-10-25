@@ -9,7 +9,9 @@ Description:
 
 ## Demo
 
-![Vinco](https://pbs.twimg.com/media/Ff4yxnMUUAI2aNb?format=jpg&name=large)
+[Live demo](https://vinco-client.vercel.app/)
+
+![Vinco](https://i.ibb.co/Xxt2MtX/Screen-Shot-2022-10-24-at-23-12-51.png)
 
 **Structured and configured packages for the Vinco client.**
 

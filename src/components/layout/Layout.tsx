@@ -18,7 +18,7 @@ export const Layout: React.FC<Props> = ({
   children,
   title,
   pageDescription,
-  setInfoUser,
+  setInfoUser
 }) => {
   const router = useRouter();
   const handleLogout = async () => {

@@ -1,13 +1,14 @@
 import axios from 'axios';
+import { toastError } from 'helpers/toast';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
 import { useState } from 'react';
+import { Toaster } from 'react-hot-toast';
 import styles from 'styles/pages/login.module.scss';
 
 const Login = () => {
   const router = useRouter();
   const [dataLogin, setDataLogin] = useState({ email: '', password: '' });
-  const [error, setError] = useState(undefined);
 
   const handleChange = e => {
     const { name, value } = e.target;
@@ -18,10 +19,9 @@ const Login = () => {
     e.preventDefault();
     try {
       await axios.post('/api/auth/login', dataLogin);
-      setError(undefined);
       router.push('/');
     } catch (error) {
-      setError(error.response.data.message);
+      toastError(error.response.data.message);
     }
   };
 
@@ -29,6 +29,7 @@ const Login = () => {
 
   return (
     <>
+      <Toaster />
       <Head>
         <title>Login</title>
         <meta name="description" content="Profile" />
@@ -64,10 +65,10 @@ const Login = () => {
             type="submit"
             onClick={e => handleSubmit(e)}
             className={styles.btn + ' ' + `${!dataValid && styles.btnDisabled}`}
+            disabled={!dataValid}
           >
             Iniciar sesión
           </button>
-          {error && <p className={styles.messageError}>{error}</p>}
         </form>
       </div>
     </>

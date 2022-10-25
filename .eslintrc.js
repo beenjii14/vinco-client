@@ -35,6 +35,8 @@ module.exports = {
     '@typescript-eslint/indent': 0,
     '@typescript-eslint/no-floating-promises': 0,
     '@typescript-eslint/no-misused-promises': 0,
+    '@typescript-eslint/no-explicit-any': 'off',
+    '@typescript-eslint/explicit-function-return-type': 'off',
     '@typescript-eslint/strict-boolean-expressions': [
       'error',
       { allowRuleToRunWithoutStrictNullChecksIKnowWhatIAmDoing: true },
